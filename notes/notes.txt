@@ -3,6 +3,19 @@
 GENERAL NOTES
 -------------
 
+
+EXTRACTING PAGES FROM DJVU FILE
+-------------------------------
+
+  All pages from the DjVu document can be extracted as a bi-level
+  image in with the following command:
+
+  ddjvu -format=pbm -eachpage -1 The-Mathematical-Theory-of-Communication.djvu out_%03d.pbm
+
+  The -1 switch ensures that the output images are at the native
+  resolution of the DjVu file.
+
+
 BOOK DIMENSIONS
 ---------------
 
