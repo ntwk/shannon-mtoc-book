@@ -1,0 +1,43 @@
+[2019-03-23 Sat]
+
+GENERAL NOTES
+-------------
+
+BOOK DIMENSIONS
+---------------
+
+  The following notes do not take the front and back cover into
+  consideration and concern only the book's enclosing pages.
+
+  The page dimensions in the original DjVu document are not uniform.
+  Page widths are either 1568, 1600, or 1632 pixels with 1600 being
+  the most common:
+
+  | WIDTH | PAGES |
+  |-------+-------|
+  |  1568 |    30 |
+  |  1600 |    95 |
+  |  1632 |     5 |
+
+  Page heights are either 2368 or 2400 pixels:
+
+  | HEIGHT | PAGES |
+  |--------+-------|
+  |   2368 |    70 |
+  |   2400 |    60 |
+  
+  I noted the range of width and heights are in discrete steps of 32
+  pixels.
+
+  I have decided that the dimensions of the restored document will be
+  1600x2400 as this gives a nice ratio of 2:3.
+
+  Looking at both the width and height of each page, only four of the
+  possible six combinations appear:
+
+  | DIMENSIONS | PAGES |
+  |------------+-------|
+  |  1568x2368 |    30 |
+  |  1600x2368 |    40 |
+  |  1600x2400 |    55 |
+  |  1632x2400 |     5 |
