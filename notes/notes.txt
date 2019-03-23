@@ -3,6 +3,17 @@
 GENERAL NOTES
 -------------
 
+  This package provides tools to aid in the conversion from DjVu to
+  PDF of the book "The Mathematical Theory of Communication" by Claude
+  E. Shannon and Warren Weaver.
+
+  The source file is a DjVu copy of the eighth paperback printing of
+  the book, published in 1980.  This source file is not provided and
+  must be acquired elsewhere.  The MD5 hash of the source DjVU file
+  is:
+
+  4c4609e69eed2ccf998ec2b575c932cc
+
 
 EXTRACTING PAGES FROM DJVU FILE
 -------------------------------
