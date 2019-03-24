@@ -3,14 +3,13 @@
 GENERAL NOTES
 -------------
 
-  This package provides tools to aid in the conversion from DjVu to
-  PDF of the book "The Mathematical Theory of Communication" by Claude
-  E. Shannon and Warren Weaver.
+  Herein lies a tool to aid in the conversion from DjVu to PDF of the
+  book "The Mathematical Theory of Communication" by Claude E. Shannon
+  and Warren Weaver.
 
-  The source file is a DjVu copy of the eighth paperback printing of
-  the book, published in 1980.  This source file is not provided and
-  must be acquired elsewhere.  The MD5 hash of the source DjVU file
-  is:
+  The source file is a DjVu copy of the book's eighth paperback
+  printing, published in 1980.  This source file is not included and
+  must be acquired elsewhere.  The MD5 hash of the DjVu file is:
 
   4c4609e69eed2ccf998ec2b575c932cc
 
@@ -18,13 +17,13 @@ GENERAL NOTES
 EXTRACTING PAGES FROM DJVU FILE
 -------------------------------
 
-  All pages from the DjVu document can be extracted as a bi-level
-  image in with the following command:
+  The pages of the DjVu document can be extracted as a set of bi-level
+  images with the following command:
 
-  ddjvu -format=pbm -eachpage -1 The-Mathematical-Theory-of-Communication.djvu out_%03d.pbm
+  make pbm
 
-  The -1 switch ensures that the output images are at the native
-  resolution of the DjVu file.
+  The resulting images will be in Netpbm format and can be found under
+  the pbm/ directory.
 
 
 BOOK DIMENSIONS
@@ -33,9 +32,16 @@ BOOK DIMENSIONS
   The following notes do not take the front and back cover into
   consideration and concern only the book's enclosing pages.
 
-  The page dimensions in the original DjVu document are not uniform.
-  Page widths are either 1568, 1600, or 1632 pixels with 1600 being
-  the most common:
+  Once the pages have been extracted from the DjVu file at their
+  native resolution, it can been seen that the page dimensions
+  uniform:
+
+  make pbm
+  identify -format '%wx%h\n' pbm/*.pbm
+
+  The output of the above commands reveals that the pages are either
+  1568, 1600, or 1632 pixels wide with a 1600-pixel width being the
+  most common:
 
   | WIDTH | PAGES |
   |-------+-------|
@@ -43,21 +49,21 @@ BOOK DIMENSIONS
   |  1600 |    95 |
   |  1632 |     5 |
 
-  Page heights are either 2368 or 2400 pixels:
+  The pages are either 2368 or 2400 pixels in height:
 
   | HEIGHT | PAGES |
   |--------+-------|
   |   2368 |    70 |
   |   2400 |    60 |
   
-  I noted the range of width and heights are in discrete steps of 32
-  pixels.
+  The range of width and heights are in discrete steps of 32 pixels.
 
-  I have decided that the dimensions of the restored document will be
-  1600x2400 as this gives a nice ratio of 2:3.
+  It has been decided that the enclosing pages dimensions of the
+  converted PDF document will be 1600 by 2400 pixels as this gives a
+  nice ratio of 2:3.
 
   Looking at both the width and height of each page, only four of the
-  possible six combinations appear:
+  possible six combinations occur:
 
   | DIMENSIONS | PAGES |
   |------------+-------|
