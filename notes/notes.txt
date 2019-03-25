@@ -33,7 +33,7 @@ EXTRACTING PAGES FROM DJVU FILE
 -------------------------------
 
   The pages of the DjVu document can be extracted as a set of bi-level
-  images with the following command:
+  images at their native resolution with the following command:
 
   make pbm
 
@@ -47,16 +47,14 @@ BOOK DIMENSIONS
   The following notes do not take the front and back cover into
   consideration and concern only the book's enclosing pages.
 
-  Once the pages have been extracted from the DjVu file at their
-  native resolution, it can been seen that the page dimensions
-  uniform:
+  Once the book's pages have been extracted, it can been seen that the
+  page dimensions are not uniform:
 
-  make pbm
   identify -format '%wx%h\n' pbm/*.pbm
 
-  The output of the above commands reveals that the pages are either
-  1568, 1600, or 1632 pixels wide with a 1600-pixel width being the
-  most common:
+  The output of the above command reveals that the pages are either
+  1568, 1600, or 1632 pixels wide with a 1600-pixel page width being
+  the most common:
 
   | WIDTH | PAGES |
   |-------+-------|
