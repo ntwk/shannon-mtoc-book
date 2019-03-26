@@ -1,7 +1,7 @@
 .PHONY: pbm
 pbm: src/*.djvu
 	@mkdir -p pbm
-	ddjvu -format=pbm -eachpage -1 $< pbm/page_%03d.pbm
+	script/djvutopbm.sh $< pbm
 
 .PHONY: clean
 clean:
