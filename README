@@ -17,14 +17,15 @@ GENERAL NOTES
 SOFTWARE DEPENDENCIES
 ---------------------
 
-  This tool depends on Bash, Make, ImageMagick, Perl, and the
-  PDF::API2 Perl module.
+  This tool depends on Bash, Make, DjVuLibre, ImageMagick, Perl, and
+  the PDF::API2 Perl module.
 
   This software has been tested using the following software versions:
 
   - Bash v5.0.002
   - Make v4.2.1
-  - ImageMagick v7.0.8.34
+  - DjVuLibre v3.5.27
+  - ImageMagick v7.0.8.35
   - Perl v5.28.1
   - PDF::API2 v2.033
 
