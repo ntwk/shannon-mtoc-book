@@ -1,5 +1,9 @@
 PBMDIR = pbm
 
+book.pdf: src/*.djvu pbm
+	script/preprocess.sh < src/transforms.in | script/crop.sh $(PBMDIR)
+	script/pbmtopdf.pl
+
 .PHONY: pbm
 pbm: src/*.djvu
 	@mkdir -p $(PBMDIR)
@@ -7,4 +11,4 @@ pbm: src/*.djvu
 
 .PHONY: clean
 clean:
-	rm -rf $(PBMDIR)
+	rm -rf $(PBMDIR) book.pdf

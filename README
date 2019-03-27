@@ -30,6 +30,16 @@ SOFTWARE DEPENDENCIES
   - PDF::API2 v2.033
 
 
+BUILDING THE PDF BOOK
+---------------------
+
+  Place the original DjVu copy in the src/ directory and run:
+
+  make book.pdf
+
+  This will generate the PDF conversion as 'book.pdf'.
+
+
 EXTRACTING PAGES FROM DJVU FILE
 -------------------------------
 
