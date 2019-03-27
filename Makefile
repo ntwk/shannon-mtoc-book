@@ -1,8 +1,10 @@
+PBMDIR = pbm
+
 .PHONY: pbm
 pbm: src/*.djvu
-	@mkdir -p pbm
-	script/djvutopbm.sh $< pbm
+	@mkdir -p $(PBMDIR)
+	script/djvutopbm.sh $< $(PBMDIR)
 
 .PHONY: clean
 clean:
-	rm -rf pbm/
+	rm -rf $(PBMDIR)
