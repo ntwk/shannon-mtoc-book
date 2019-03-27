@@ -11,4 +11,4 @@ DJVUFILE="$1"
 OUTPUTDIR="$2"
 NPAGES=$(djvused -e n "$DJVUFILE")
 
-ddjvu -format=pbm -eachpage -1 "$DJVUFILE" "$OUTPUTDIR"/page_%0${#NPAGES}d.pbm
+ddjvu -format=pbm -page=2-131 -eachpage -1 "$DJVUFILE" "$OUTPUTDIR"/page_%0${#NPAGES}d.pbm
